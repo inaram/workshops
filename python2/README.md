@@ -1,4 +1,4 @@
-This exercises introduce and explore the following concepts:
+These exercises introduce and explore the following concepts:
 - for
 - if
 - while
