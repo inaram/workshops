@@ -32,7 +32,7 @@ def shopping2():
     '''v1.2
     concepts: For, If
         Nested for loops and if statements
-	    Checking user input'''
+        Checking user input'''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
     print "Please enter one item per line and hit enter"
