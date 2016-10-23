@@ -36,8 +36,8 @@ def shopping2():
     '''
     v1.2
     concepts: For, If
-			Nested for loops and if statements
-			Checking user input
+	    Nested for loops and if statements
+		Checking user input
     '''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
@@ -58,9 +58,9 @@ def shopping3():
     '''
     v1.3
     concepts: For, If
-			Nested for loops and if statements
-			Checking user input
-			Helper functions 
+		Nested for loops and if statements
+		Checking user input
+		Helper functions 
     '''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
@@ -79,7 +79,7 @@ def shopping3():
 
 def listChecker(shoppingList, item):
     '''
-	Checks whether the item is already in the list
+    Checks whether the item is already in the list
     Helper function for shoppping3(), v1.3
     '''
     itemTemp = item.strip()
