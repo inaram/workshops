@@ -4,10 +4,8 @@ Input: user identifies the number and names of the items
 Output: completed shopping list
 '''
 def shopping0():
-    '''
-    v1.0
-    concepts: For
-    '''
+    '''v1.0
+    concepts: For'''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
     print "Please enter one item per line and hit enter"
@@ -18,10 +16,8 @@ def shopping0():
 
 
 def shopping1():
-    '''
-    v1.1
-    concepts: For, If
-    '''
+    '''v1.1
+    concepts: For, If'''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
     print "Please enter one item per line and hit enter"
@@ -33,12 +29,10 @@ def shopping1():
 
 
 def shopping2():
-    '''
-    v1.2
+    '''v1.2
     concepts: For, If
-	    Nested for loops and if statements
-		Checking user input
-    '''
+        Nested for loops and if statements
+	    Checking user input'''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
     print "Please enter one item per line and hit enter"
@@ -55,13 +49,11 @@ def shopping2():
 
 
 def shopping3():
-    '''
-    v1.3
+    '''v1.3
     concepts: For, If
-		Nested for loops and if statements
-		Checking user input
-		Helper functions 
-    '''
+        Nested for loops and if statements
+        Checking user input
+        Helper functions '''
     shoppingList = []
     numberOfItems = int(raw_input("How many items would you like to buy today? "))
     print "Please enter one item per line and hit enter"
@@ -79,8 +71,7 @@ def shopping3():
 
 def listChecker(shoppingList, item):
     '''Checks whether the item is already in the list
-    Helper function for shoppping3(), v1.3
-    '''
+    Helper function for shoppping3(), v1.3'''
     itemTemp = item.strip()
     itemTemp = itemTemp.lower()
     if itemTemp[-1] == "s": #plural for most words
@@ -90,10 +81,8 @@ def listChecker(shoppingList, item):
     return shoppingList
 
 def listDisplay(shoppingList):
-    '''
-    Displays the list in user-friendly form
-    Helper function for shopping3(), v.1.3
-    '''
+    '''Displays the list in user-friendly form
+    Helper function for shopping3(), v.1.3'''
     for item in shoppingList:
         if shoppingList.index(item) == len(shoppingList) - 1:
             print "and", item + ".", 
