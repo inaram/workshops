@@ -78,8 +78,7 @@ def shopping3():
     listDisplay(shoppingList)
 
 def listChecker(shoppingList, item):
-    '''
-    Checks whether the item is already in the list
+    '''Checks whether the item is already in the list
     Helper function for shoppping3(), v1.3
     '''
     itemTemp = item.strip()
