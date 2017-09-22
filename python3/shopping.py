@@ -7,10 +7,10 @@ def shopping0():
     '''v1.0
     concepts: For'''
     shoppingList = []
-    numberOfItems = int(raw_input("How many items would you like to buy today? "))
+    numberOfItems = int(input("How many items would you like to buy today? "))
     print("Please enter one item per line and hit enter")
     for position in range(numberOfItems):
-        item = raw_input(": ")
+        item = input(": ")
         shoppingList.append(item)
     print("Today you want to buy", shoppingList)
 
@@ -22,7 +22,7 @@ def shopping1():
     numberOfItems = int(input("How many items would you like to buy today? "))
     print("Please enter one item per line and hit enter")
     for position in range(numberOfItems):
-        item = raw_input(": ")
+        item = input(": ")
         if item not in shoppingList:
             shoppingList.append(item)
     print("Today you want to buy", shoppingList)
@@ -37,7 +37,7 @@ def shopping2():
     numberOfItems = int(input("How many items would you like to buy today? "))
     print("Please enter one item per line and hit enter")
     for position in range(numberOfItems):
-        item = raw_input(": ")
+        item = input(": ")
         if "," in item:
             items = item.split(",")
             for item in items:
@@ -58,7 +58,7 @@ def shopping3():
     numberOfItems = int(input("How many items would you like to buy today? "))
     print("Please enter one item per line and hit enter")
     for position in range(numberOfItems):
-        item = raw_input(": ")
+        item = input(": ")
         if "," in item:
             items = item.split(",")
             for item in items:

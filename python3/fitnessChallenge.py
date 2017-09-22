@@ -13,7 +13,7 @@ def fitnessChallenge():
             print("Keep up the good work!")
             
     if totalMinutes != 0 or totalDays != 0:
-        print("Congratulations! You have exercised for %d day(s) out of your %d-day challenge") % (totalDays, challengeLength)
+        print("Congratulations! You have exercised for %d day(s) out of your %d-day challenge" % (totalDays, challengeLength))
         print("Total number of minutes:", totalMinutes)
 
 def main():

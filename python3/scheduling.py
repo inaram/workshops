@@ -29,7 +29,7 @@ def calendar():
                     print("Sorry, you already have", myCalendar[day], "scheduled on", day)
     else:
         print("Now your calendar is full. Here is what you have scheduled for next week: ")
-        print(myCalendar.items())
+        sortedCalendar(myCalendar)
 
 def main():
     calendar()
