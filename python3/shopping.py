@@ -92,10 +92,10 @@ def listDisplay(shoppingList):
 
 
 def main():
-    shopping0()
+#    shopping0()
     shopping1()
-    shopping2()
-    shopping3()
+#    shopping2()
+#    shopping3()
 
 
 if __name__ == "__main__":
