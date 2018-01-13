@@ -1,101 +1,130 @@
 '''
-Shopping exercises use list structure to represent a collection of shopping list items. 
-Input: user identifies the number and names of the items 
-Output: completed shopping list
+Shopping exercises use list structure to represent a collection of shopping list items.
+Verisions of shopping#() built on each other to demonstrate incremental programming. 
 '''
 def shopping0():
     '''v1.0
-    concepts: For'''
+    concepts: Variable Names '''
     shoppingList = []
     numberOfItems = int(input("How many items would you like to buy today? "))
-    print("Please enter one item per line and hit enter")
-    for position in range(numberOfItems):
-        item = input(": ")
-        shoppingList.append(item)
-    print("Today you want to buy", shoppingList)
-
+    print("Today you want to buy", numberOfItems, "item(s)")
 
 def shopping1():
     '''v1.1
-    concepts: For, If'''
+    concepts: If '''
     shoppingList = []
     numberOfItems = int(input("How many items would you like to buy today? "))
-    print("Please enter one item per line and hit enter")
-    for position in range(numberOfItems):
-        item = input(": ")
-        if item not in shoppingList:
-            shoppingList.append(item)
-    print("Today you want to buy", shoppingList)
-
-
+    if numberOfItems > 0:
+        print("Today you want to buy", numberOfItems, "item(s)")
+        
 def shopping2():
     '''v1.2
-    concepts: For, If
-        Nested for loops and if statements
-        Checking user input'''
+    concepts: Else '''
     shoppingList = []
     numberOfItems = int(input("How many items would you like to buy today? "))
-    print("Please enter one item per line and hit enter")
-    for position in range(numberOfItems):
-        item = input(": ")
-        if "," in item:
-            items = item.split(",")
-            for item in items:
-                if item not in shoppingList:
-                    shoppingList.append(item)
-        if item not in shoppingList:
-            shoppingList.append(item)
-    print("Today you want to buy", shoppingList)
-
+    if numberOfItems > 0:
+        print("Today you want to buy", numberOfItems, "item(s)")
+    else:
+        print("Today you don't want to buy anything")
 
 def shopping3():
     '''v1.3
-    concepts: For, If
-        Nested for loops and if statements
-        Checking user input
-        Helper functions '''
+    concepts: Elif '''
     shoppingList = []
     numberOfItems = int(input("How many items would you like to buy today? "))
-    print("Please enter one item per line and hit enter")
-    for position in range(numberOfItems):
+    if numberOfItems == 1:
+        print("Today you want to buy 1 item")
+    elif numberOfItems > 1:
+        print("Today you want to buy", numberOfItems, "items")
+    else:
+        print("Today you don't want to buy anything")
+
+def shopping4():
+    '''v1.4
+    concepts: For, In '''
+    shoppingList = []
+    numberOfItems = int(input("How many items would you like to buy today? "))
+
+    if numberOfItems == 1:
         item = input(": ")
-        if "," in item:
-            items = item.split(",")
-            for item in items:
-                print("in comma items, on item", item)
-                shoppingList = listChecker(shoppingList, item)
-        else:
-            shoppingList = listChecker(shoppingList, item)
-    print("Today you want to buy",) 
-    listDisplay(shoppingList)
+        shoppingList.append(item)
+        print("Today you want to buy 1 item")
+        print("Item is ", shoppingList[0])
+        
+    elif numberOfItems > 1:
+        print("Please enter one item per line and hit enter")    
+        for position in range(numberOfItems):
+            item = input(": ")
+            shoppingList.append(item)
+        print("Today you want to buy", numberOfItems, "items")
+        print("Items are", shoppingList)
 
-def listChecker(shoppingList, item):
-    '''Checks whether the item is already in the list
-    Helper function for shoppping3(), v1.3'''
-    itemTemp = item.strip()
-    itemTemp = itemTemp.lower()
-    if itemTemp[-1] == "s": #plural for most words
-        itemTemp = itemTemp[:-1]
-    if itemTemp not in shoppingList:
-        shoppingList.append(itemTemp)
-    return shoppingList
+    else:
+        print("Today you don't want to buy anything")
 
-def listDisplay(shoppingList):
-    '''Displays the list in user-friendly form
-    Helper function for shopping3(), v.1.3'''
-    for item in shoppingList:
-        if shoppingList.index(item) == len(shoppingList) - 1:
-            print("and", item + ".",) 
-        else:    
-            print(item + ",",) 
+def shopping5():
+    '''v1.5
+    concepts: Not '''
+    shoppingList = []
+    numberOfItems = int(input("How many items would you like to buy today? "))
 
+    if numberOfItems == 1:
+        item = input(": ")
+        shoppingList.append(item)
+        print("Today you want to buy 1 item")
+        print("Item is ", shoppingList[0])
 
+    elif numberOfItems > 1:
+        print("Please enter one item per line and hit enter")    
+        for position in range(numberOfItems):
+            item = input(": ")
+            if item not in shoppingList:
+                shoppingList.append(item)
+        print("Today you want to buy", len(shoppingList), "items")
+        print("Items are", shoppingList)
+
+    else:
+        print("Today you don't want to buy anything")
+
+        
+def shopping6():
+    '''v1.6
+    concepts: nested for loops '''
+    shoppingList = []
+    numberOfItems = int(input("How many items would you like to buy today? "))
+
+    if numberOfItems == 1:
+        item = input(": ")
+        shoppingList.append(item)
+        print("Today you want to buy 1 item")
+        print("Item is ", shoppingList[0])
+
+    elif numberOfItems > 1:
+        print("Please enter one item per line and hit enter")    
+        for position in range(numberOfItems):
+            item = input(": ")
+            if "," in item:
+                items = item.split(",")
+                for item in items:
+                    item = item.strip()
+                    if item not in shoppingList:
+                        shoppingList.append(item)        
+            elif item not in shoppingList:
+                shoppingList.append(item)
+        print("Today you want to buy", len(shoppingList), "items")
+        print("Items are", shoppingList)
+
+    else:
+        print("Today you don't want to buy anything")
 
 def main():
 #    shopping0()
-    shopping1()
+#    shopping1()
 #    shopping2()
 #    shopping3()
+#    shopping4()
+#    shopping5()
+    shopping6()
 
 
 if __name__ == "__main__":
